@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppDos</string>
+    <string name="titulo">Nota Definitiva</string>
+    <string name="btnc">Calcular promedio</string>
+    <string name="txt1">Digite Nota Corte 1</string>
+    <string name="txt2">Digite Nota Corte 2</string>
+    <string name="txt3">Digite Nota Corte 3</string>
+    <string name="mensaje1">0</string>
+    <string name="mensaje2">0</string>
+</resources>
