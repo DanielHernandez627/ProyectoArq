@@ -26,7 +26,7 @@
         android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="@string/txt1"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo" />
@@ -39,7 +39,7 @@
         android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="@string/txt2"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt1" />
@@ -52,7 +52,7 @@
         android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="@string/txt3"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt2" />
@@ -63,6 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="70dp"
+        android:onClick="calculo"
         android:text="@string/btnc"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,16 +79,5 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnc" />
-
-    <TextView
-        android:id="@+id/mensaje2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/mensaje2"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mensaje1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

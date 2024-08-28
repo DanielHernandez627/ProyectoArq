@@ -38,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculo(View view){
+        String c1 = txt1.getText().toString();
+        String c2 = txt2.getText().toString();
+        String c3 = txt3.getText().toString();
 
+        float c1int = Float.parseFloat(c1);
+        float c2int = Float.parseFloat(c2);
+        float c3int = Float.parseFloat(c3);
+
+        float result = (c1int + c2int + c3int)/3;
+
+        mensaje1.setText(String.valueOf(result));
     }
 }

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">calculadora</string>
+    <string name="txt_titulo">Pequeña Calculadora</string>
+    <string name="txt_n1">Digite Primer Numero</string>
+    <string name="txt_n2">Digite Segundo Numero</string>
+    <string name="rbtn_suma">Sumar</string>
+    <string name="rbtn_resta">Restar</string>
+    <string name="rbtn_multi">Multiplicar</string>
+    <string name="rbtn_divi">Dividir</string>
+    <string name="btn_calcular">Calcular</string>
+    <string name="txt_result">0</string>
+</resources>
