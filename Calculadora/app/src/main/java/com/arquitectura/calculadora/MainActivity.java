@@ -1,6 +1,7 @@
 package com.arquitectura.calculadora;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -35,5 +36,29 @@ public class MainActivity extends AppCompatActivity {
         rbtn_resta = (RadioButton) findViewById(R.id.rbtn_resta);
         rbtn_multi = (RadioButton) findViewById(R.id.rbtn_multi);
         rbtn_divi = (RadioButton) findViewById(R.id.rbtn_divi);
+    }
+
+    //Metodo Calculadora
+    public void calcular(View view){
+        String sn1 = txt_n1.getText().toString();
+        String sn2 = txt_n2.getText().toString();
+        float numero1 = Float.parseFloat(sn1);
+        float numero2 = Float.parseFloat(sn2);
+
+        if (rbtn_suma.isChecked()){
+            float suma = numero1 + numero2;
+            txt_result.setText(String.valueOf(suma));
+        }else if(rbtn_resta.isChecked()){
+            float resta = numero1 - numero2;
+            txt_result.setText(String.valueOf(resta));
+        } else if (rbtn_multi.isChecked()) {
+            float multi = numero1 * numero2;
+            txt_result.setText(String.valueOf(multi));
+        } else if (rbtn_divi.isChecked()) {
+            float divi = numero1 / numero2;
+            txt_result.setText(String.valueOf(divi));
+        }else{
+            txt_result.setText("Seleccione un radio button");
+        }
     }
 }
