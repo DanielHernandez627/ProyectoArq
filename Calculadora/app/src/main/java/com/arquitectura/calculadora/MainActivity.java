@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     //Metodo Calculadora
     public void calcular(View view){
-        String sn1 = txt_n1.getText().toString();
-        String sn2 = txt_n2.getText().toString();
+        String sn1 = (txt_n1.getText().toString().equals("")) ? "0" : txt_n1.getText().toString();
+        String sn2 = (txt_n2.getText().toString().equals("")) ? "0" : txt_n2.getText().toString();
         float numero1 = Float.parseFloat(sn1);
         float numero2 = Float.parseFloat(sn2);
 
@@ -55,8 +56,12 @@ public class MainActivity extends AppCompatActivity {
             float multi = numero1 * numero2;
             txt_result.setText(String.valueOf(multi));
         } else if (rbtn_divi.isChecked()) {
-            float divi = numero1 / numero2;
-            txt_result.setText(String.valueOf(divi));
+            if (numero2 == 0){
+                System.out.println("XD");
+            }else{
+                float divi = numero1 / numero2;
+                txt_result.setText(String.valueOf(divi));
+            }
         }else{
             txt_result.setText("Seleccione un radio button");
         }
