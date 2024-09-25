@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">spinner</string>
+    <string name="tl_principal">Spinner Calculando</string>
+    <string name="txt_1">Digite el primer valor</string>
+    <string name="txt_2">Digite el segundo valor</string>
+    <string name="spinner"></string>
+    <string name="txt_result">0</string>
+    <string name="btn_calcular">Calcular</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">pasodatos</string>
+    <string name="tlPrincipal">Activity 1</string>
+    <string name="txtDato1">Digite un nombre</string>
+    <string name="btnEnviar">Enviar</string>
+    <string name="tlDatos">Activity 2</string>
+    <string name="txtSaludo">Buena Noche</string>
+    <string name="btnRegresar">Regresar</string>
+</resources>
