@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="tlPrincipal">Contactos Personales</string>
+    <string name="txtNombre">Digite un nombre</string>
+    <string name="txtDatos">Digite los datos que desee</string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="btnBuscar">Buscar</string>
+</resources>
