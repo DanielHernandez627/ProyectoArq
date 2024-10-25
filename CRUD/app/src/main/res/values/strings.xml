@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">crudProductos</string>
+    <string name="tlPrincipal">Gestion Base de Datos Productos</string>
+    <string name="txtCod">Codigo del Producto</string>
+    <string name="txtNombre">Nombre del Producto</string>
+    <string name="txtPrecio">Valor del Producto</string>
+    <string name="btnRegistrar">Registrar Producto</string>
+    <string name="btnActualizar">Actualizar Producto</string>
+    <string name="btnEliminar">Eliminar Producto</string>
+    <string name="btnBuscar">Busca Producto</string>
+</resources>
