@@ -64,9 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 //Cerrar conexion BD
                 db.close();
                 //Limpiar campos
-                txtCod.setText("");
-                txtNombre.setText("");
-                txtPrecio.setText("");
+                limpiar();
 
                 Toast.makeText(this,"Registro insertado correctamente",Toast.LENGTH_LONG).show();
             }else{
@@ -93,5 +91,30 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnEliminar.setOnClickListener(v -> {
+            GestionSQLiteOpenHelper gestionSQLiteOpenHelper = new GestionSQLiteOpenHelper(this, "bdProductos", null, 1);
+            SQLiteDatabase db = gestionSQLiteOpenHelper.getWritableDatabase();
+            String cod = txtCod.getText().toString();
+            if (!cod.isEmpty()) {
+                int cantidad = db.delete("T_ARTICULOS", "CODIGO=" + cod, null);
+                db.close();
+                if (cantidad == 1){
+                    limpiar();
+                    Toast.makeText(this,"Eliminacion exitosa",Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(this,"No se encontraron datos",Toast.LENGTH_LONG).show();
+                }
+
+            }else{
+                Toast.makeText(this,"Digite un codigo",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void limpiar(){
+        txtCod.setText("");
+        txtNombre.setText("");
+        txtPrecio.setText("");
     }
 }
