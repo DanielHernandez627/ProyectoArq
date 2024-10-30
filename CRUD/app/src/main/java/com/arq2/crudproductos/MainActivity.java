@@ -110,6 +110,36 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,"Digite un codigo",Toast.LENGTH_LONG).show();
             }
         });
+
+        btnActualizar.setOnClickListener(v -> {
+            GestionSQLiteOpenHelper gestor = new GestionSQLiteOpenHelper(this, "bdProductos", null, 1);
+            //Abrir la conexion en modo lectura o escritura
+            SQLiteDatabase db = gestor.getWritableDatabase();
+
+            String cod = txtCod.getText().toString();
+            String nombre = txtNombre.getText().toString();
+            double val = Double.parseDouble(txtPrecio.getText().toString());
+
+            if (!cod.isEmpty() && !nombre.isEmpty() && val != 0){
+                //Generar el registro para la BD
+                ContentValues registro = new ContentValues();
+                registro.put("NOMBRE", nombre);
+                registro.put("PRECIO", val);
+                //Insertar el registro
+                int cantidad = db.update("T_ARTICULOS", registro, "CODIGO="+cod, null);
+                db.close();
+
+                if (cantidad == 1){
+                    limpiar();
+                    Toast.makeText(this,"Actualizacion exitosa",Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(this,"No se encontraron datos",Toast.LENGTH_LONG).show();
+                }
+            }else{
+                Toast.makeText(this,"Error todos los campos deben ser diligenciados",Toast.LENGTH_LONG).show();
+            }
+
+        });
     }
 
     private void limpiar(){
